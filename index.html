@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            outline: 0px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .n1{
+            width: 100%;
+            height: 7vh;
+            background-color: rgb(29, 27, 27);
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: relative;
+        }
+        .n11{
+             width: 35%;
+             height: 100%;
+            font-size: 16px;
+            color: aliceblue;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+        }
+        .x{
+            color: orangered;
+            font-size: 20px;
+            margin-top: 18px;
+        }
+        .x1{
+            color: orangered;
+            font-size: 20px;
+        }
+        .m1{
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 16px;
+            width:40% ;
+            height: 100%;
+            
+        
+        }
+        .m1 a{
+            text-decoration: none;
+            color: white;
+        }
+        .q1{
+            width: 100%;
+            height: 17vh;
+            /* border: 2px solid white; */
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .q11{
+            width: 10%;
+            height: 100%;
+            background: url(vlogo.png);
+            background-size: 100% 100%;
+            background-position: center center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left:100px ;
+          
+        }
+        .q111{
+            width: 80%;
+            height: 100%;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            margin-top: 90px;
+            justify-content: space-around;
+            text-decoration: solid orangered;
+        }
+        .q1111{
+            display: none;
+
+        }
+        .q111 a{
+            text-decoration: none;
+            color: black;
+        }
+        .line{
+            width: 0px;
+            height: 2px;
+            background-color: orangered;
+            transition: all 2s;
+            position: absolute;
+            left: 50%;
+        }
+        .qi{
+            height: 100%;
+            position: relative;
+            display: inline-block;
+        }
+        .qi:hover .line{
+            width:100%;
+            left: 0%;
+        }
+        .qi1{
+            width:200px;
+            height: 30vh;
+            display: none;
+            background-color: white;
+           
+           
+            position: absolute;
+            top: 40px;
+        }
+        .qi11{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: start;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        .qi:hover .qi1{
+            display: block;
+        }
+        .g1{
+            width:100%;
+            height: 35px;
+          
+        }
+        .g1:hover{
+            background-color: orange;
+        }
+        @media screen and (max-width:800px){
+           .q1111{
+            display: block;
+           }
+           .q111{
+            display: none;
+           }
+           .q11{
+          width: 35%;
+               
+           }
+           
+       .n1{
+           flex-direction: column;
+           height: 12vh;
+           font-size: 6px;
+           justify-content: space-between;
+         }
+         .n11{
+            width: 100%;
+         }
+         .m1{
+            width: 100%;
+         }
+         
+        }
+        @media screen and (max-width:800px){
+          .c1{
+            width: 100%;
+            height: 50vh;
+          }  
+        }
+        
+        .r1{
+            width: 100%;
+            height: 80vh;
+            /* border: 2px solid orangered; */
+           
+            background-size: 100% 100%;
+            position: relative;
+
+        }
+        .r11{
+            color: white;
+            font-size: 50px;
+            padding-left: 80px;
+            margin-top: -500px;
+            width: 60%;
+            height: 40%;
+            
+        }
+        .r111{
+            font-size: 22px;
+            color: white;
+            padding-left: 90px;
+            width: 30%;
+            height: 20%;
+            
+        }
+        .index{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: fixed;
+            right: 20px;
+            top: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            z-index: 10;
+        }
+        .logo_abs_circle{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: all 1s;
+        }
+        .logo_abs_circle:hover{
+            transform: rotate(360deg);
+        }
+        .s1{
+            width: 100%;
+            height: 35vh;
+            /* border: 1px solid transparent; */
+            background-image: url(vvv.jpg);
+            background-size: 100% 100%;
+        }
+        .s11{
+            font-size: 25px;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+        .s111{
+            font-size: 25px;
+            text-align: center;
+            padding-top: 20px;
+           
+        }
+        input[type=submit]{
+            width: 150px;
+            height: 50px;
+            background-color: orangered;
+            border-radius: 25px;
+            color: white;
+            font-size: 20px;
+            /* border: 2px solid white; */
+
+        }
+        input[type=submit]:hover{
+            background-color: gray;
+        }
+        .t1{
+            width: 100%;
+            height: 150vh;
+            /* border: 1px solid black; */
+            background-color: gainsboro;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+        
+        }
+        .t11{
+            width: 100%;
+            height: 30%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .t12{
+            width: 40%;
+           height: 50vh;
+           /* border: 2px solid gainsboro; */
+           font-size: 70px;
+        }
+        .t13{
+            width: 38%;
+            height: 45vh;
+        }
+        .t13 > img{
+            width: 100%;
+        }
+        .t111{
+            width: 100%;
+            height: 10%;
+            display: flex;
+            justify-content: space-around;
+        
+             
+        }
+        .ti{
+            width: 20%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 30px;
+            flex-direction: column;
+
+        }
+        .line2{
+            width: 80%;
+            height: 2px;
+            background-color: rgb(241, 121, 41);
+        }
+       .tii{
+        font-size: 65px;
+        color: rgb(241, 121, 41);
+       }
+      .slide{
+        width: 100%;
+        height: 15%;
+        flex-wrap: wrap ;
+        display: flex;
+        align-items: start;
+        justify-content: space-around;
+      }
+      .slider{
+        width:28% ;
+        height: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: whitesmoke;
+      } 
+      .ln{
+        width: 1px;
+        height: 65%;
+        background-color: rgb(241, 121, 41);
+      }
+      .num1{
+        width: 35%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column; 
+      }
+      .ig1{
+        width: 50%;
+        height: 40%;
+        background: url(comlogo.png);
+        background-size: 100% 100%;
+        justify-content: space-between;
+      }
+      .no1{
+        font-size: 65px;
+        color: rgb(241, 121, 41);
+      }
+      .text1{
+        font-size: 25px;
+        color: rgb(103, 97, 97);
+        text-align: center;
+      }
+      .ln{
+        width: 1px;
+        height: 65%;
+        background-color: rgb(241, 121, 41);
+      }
+      .num2{
+        width: 35%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;  
+      }
+      .ig2{
+        width: 40%;
+        height: 40%;
+        background: url(bosch.png);
+        background-size: 100% 100%;
+        justify-content: space-between;
+      }
+      .no2{
+        font-size: 65px;
+        color: rgb(241, 121, 41);
+      }
+      .text2{
+        font-size: 25px;
+        color: rgb(103, 97, 97);
+        text-align: center;
+      }  
+      .ln{
+        width: 1px;
+        height: 65%;
+        background-color: rgb(241, 121, 41);
+      }
+      .num3{
+        width: 30%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+      }
+      .ig3{
+        width: 40%;
+        height: 40%;
+        background: url(american-megatrends.png);
+        background-size: 100% 100%;
+        justify-content: space-between;
+      }
+      .no3{
+        font-size: 65px;
+        color: rgb(241, 121, 41);
+      }
+      .text3{
+        font-size: 25px;
+        color: rgb(103, 97, 97);
+        text-align: center;
+      }
+    .btn{
+        width: 18%;
+        height: 3%;
+        background-color: rgb(241, 121, 41);
+        border-radius: 30px;
+        border: none;
+        text-align: center;
+        padding-top: 15px;
+        
+    }
+    .btn a{
+        text-decoration: none;
+        font-size: 18px;
+        color: white;
+    }
+    .Courses{
+        width: 100%;
+        height: 250vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .title{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        padding-top: 40px;
+        font-size: 60px;
+        text-align: center;
+        height: 5%;
+    }
+    .p1{
+        font-size: 20px;
+        color: rgb(94, 97, 97);
+        text-align: center;
+        height: 5%;
+    }
+   .grid{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+   }
+   .c1{
+    width: 45%;
+    height: 50vh;
+    display: flex;
+    background-image: url(coursbg.png);
+    background-size: 100% 100% ;
+    flex-direction: column;
+    align-items: center;
+   }
+   .c2 a{
+    text-decoration: none;
+    font-size: 30px;
+    color: rgb(241, 121, 41);
+    display: flex;
+   }
+   .c1:hover .c2 a{
+    color: black;
+   }
+   .c3{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+   }
+   .c2{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   }
+   .txts{
+    margin-top: -40px;
+    font-size: 19px;
+    color: rgb(62, 59, 59);
+    justify-content: space-around;
+   }
+   
+   .lin{
+    width: 50% ;
+    height: 0.1px;
+    background-color: rgb(154, 149, 149);
+    box-shadow: 0px 0px 3px 0px gray ;
+    margin-top: -40px;
+   }
+   .c4{
+    font-size: 20px;
+    color: rgb(241, 121, 41);
+   }
+   .c5{
+    width: 100%;
+    height: 7%;
+    text-decoration: none;
+    font-size: 20px;
+    color: aliceblue;
+    display: flex;
+    background-color: black;
+    text-align: center;
+    justify-content: space-around;
+   }
+   .c5line{
+    width: 1px;
+    background-color: rgb(241, 121, 41);
+   }
+   .c5 a{
+    text-decoration: none;
+    width: 33%;
+    color: aliceblue;
+   }
+   .c5a{
+    width: 35%;
+   }
+   .c5a:hover{
+    background-color: rgb(241, 121, 41);
+   }
+   
+   .back{
+    width: 100%;
+    height: 100vh;
+    /* border: 1px solid black; */
+    background-image: url(video-bg\ \(2\).jpg);
+    background-size: 100% 65%; 
+    background-repeat: no-repeat;
+   }
+   .circles {
+  height: 60vmin;
+  position: relative;
+  width: 60vmin;
+  left: 35%;
+bottom: 0%;
+ 
+   .circle1{
+    animation: growAndFade 3s infinite ease-out;
+    background-color: orange;
+    border-radius: 50%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+  }
+   .circle2{
+    animation: growAndFade 3s infinite ease-out;
+    background-color: orange;
+    border-radius: 50%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+  }
+   .circle3{
+    animation: growAndFade 3s infinite ease-out;
+    background-color: orange;
+    border-radius: 50%;
+    height: 100%;
+    opacity: 0;
+    position: absolute;
+   
+    width: 100%;
+  }
+  .circle4{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+   
+    position: absolute;
+    left: 43%;
+bottom: 42%;
+z-index: 10;
+background-color: orange;
+font-size: 20px;
+display: flex;align-items: center;
+justify-content: center;
+  }
+  
+  .circle1 {
+    animation-delay: 1s;    
+  }
+  .circle2 {
+    animation-delay: 2s; 
+  }
+  .circle3 {
+    animation-delay: 3s;
+  }
+}
+
+@keyframes growAndFade {
+  0% {
+    opacity: .25;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}
+
+
+   .front{
+    width:100% ;
+    height: 40vh;
+    margin-top: 60vh;
+    background-image: url(vvv.jpg);
+    background-size: 100% 100%;
+    /* border: 2px solid black; */
+    position: absolute;
+    top: 530vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   }
+   .sld div{
+    width: 17%;
+    height: 50%;
+   
+   }
+   .sld{
+    width: 90%;
+    height: 70%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    justify-content: space-around;
+   }
+   
+   .three{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+   }
+   .on{
+    font-size: 50px;
+    height: 10%;
+    color: rgb(79, 77, 77);
+    margin-top: 5vh;
+    margin-bottom: 10px;
+    color: rgb(241, 121, 41);
+   }
+   .off{
+    height: 10%;
+    font-size: 20px;
+    margin-top: -7vh;
+    color: rgb(79, 77, 77);
+   }
+   .Z{
+    width: 95%;
+    height: 60%;
+    border: 1px solid blue;
+    margin-top: 10vh;
+    margin-left: 5vh;
+    display: flex;
+   }
+   .z1{
+    width: 30%;
+    height: 90%;
+    /* border: 1px solid seagreen; */
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+    justify-content: space-between;
+    flex-direction: column;
+    background-image: url(coursbg.png);
+    background-size: 100% 100%;
+   }
+   .c6{
+    width: 20%;
+    height: 30px;
+    border-radius: 25px;
+    background-color: rgb(241, 121, 41);
+    font-size: 20px;
+    text-align:center;
+    display: flex;
+    justify-content: space-around;   
+   }
+   .vector{
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(237, 237, 237);
+   }
+   .b1{
+        font-size: 40px;
+        color: rgb(241, 121, 41);
+        justify-content: center;
+       
+   }
+   .hole{
+       width: 80%;
+       height: 70%;
+       display: grid;
+       grid-template-rows: 1fr 1fr;
+       grid-template-columns: 1fr 1fr 1fr;
+       align-items: center;
+       gap: 5px;
+   }
+   .b2{
+        width: 90%;
+        height: 90%;
+        /* background: cover; */
+        
+   }
+   .b2:hover{
+    
+    background-color: aqua;
+   }
+   .test{
+        width: 100%;
+        height: 100vh;
+        /* border: 1px solid red; */
+   }
+   .test1{
+    width: 80%;
+    height: 90%;
+    /* border: 2px solid yellow; */
+    margin-left: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column  ;
+   }
+  
+   .cirls{
+    margin-left: 700px;
+    margin-top: 170px;
+   }
+   .cie{
+        width: 15vh;
+        height: 15vh;
+        border-radius: 50%;
+        border:5px solid rgb(232, 225, 226);
+        box-shadow: 0px 0px 3px 3px greenyellow;
+        margin-top: 100px;  
+   }
+   .query{
+    width: 100%;
+    height: 100vh;
+    border: 2px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+   }
+   .pr1{
+    width: 80vh;
+    height: 30px;
+    border: 2px solid red;
+    display: flex;
+   
+    
+    margin-left: 53vh;
+    margin: auto;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+   }
+   .main{
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        background-color:black;
+        width: 100%;
+        height: 70vh;
+
+    } 
+    .div1 h3{
+                color: white;
+                padding-left: 15px;
+                margin-top: 15px;
+            }
+            .div1 h3{
+                color: white;
+                padding-left: 15px;
+                margin-top: 15px;
+            }
+            .div1 h3{
+                color: white;
+                padding-left: 15px;
+                margin-top: 15px;
+            }
+            .div1 ul li{
+                list-style-type:none;
+            }
+    </style>
+</head>
+<body>
+    <nav class="n1">
+        <div class="n11">
+           <div><i class="x fa-sharp fa-solid fa-envelope fa-2xs"></i></div>
+            <div style="text-indent: 10px;"> info@vectorindia.org</div>
+            <div style="text-indent: 25px;"><i class=" x1 fa-solid fa-phone"></i></div>
+            <div style="text-indent: 5px;">+91 98666 66699</div>
+        </div>
+        <div class="m1">
+           <div><a href="#">Admission</a></div>
+           <div><a href="student.html">Apply Online</a></div>
+           <div><a href="./apply.html">Student login</a></div>
+           <div><a href="#">Quick Enquiry</a></div>
+           <div><a href="https://www.vectorindia.org/photogallery.html">Gallery</a></div>
+        </div>
+    </nav>
+    <nav class="q1">
+        <div class="q11">  </div>
+        <div class="q111">
+        <div class="qi"><a href="https://www.vectorindia.org/institute.html">Institute</a>
+        <div class="line"></div></div>
+        <div  class="qi"><a href="#">Embedded system</a> <div class="line"></div> 
+            <div class="qi1">
+                <div class="qi11"> 
+                    <div class="g1"><a href="https://www.vectorindia.org/embedded-systems.html">Embedded-system(Regular)</div>
+                    <div class="g1">Embedded-system(Online)</div>  
+            
+               </div></div> 
+    </div>
+        <div  class="qi"><a href="https://www.vectorindia.org/full-stack-development.html" >Full Stack Developement</a> <div class="line"></div></div>
+        <div  class="qi"><a href="#" >Short Term Courses</a><div class="line"></div>
+        <div class="qi1">
+            <div class="qi11"> <div class="g1">Automative Embedded</div>
+            <div class="g1">Autosar</div>
+            <div class="g1">Micro Python</div>
+            <div class="g1">Python</div>
+            <div class="g1">Embedded C</div></div>
+           </div></div>
+        <div  class="qi"><a href="#" >Corporates</a><div class="line"></div>
+        <div class="qi1">
+            <div class="qi11"> <div class="g1">Hire from us</div>
+            <div class="g1">Train from us</div>  
+    </div></div> </div>
+        <div class="qi"><a href="https://www.vectorindia.org/workshops.html" >Workshops</a><div class="line"></div></div>
+        <div class="qi"><a href="https://www.vectorindia.org/placements.html" >Placements</a><div class="line"></div></div>
+
+        </div>
+    <div class="q1111">
+        <i class="fa-sharp fa-solid fa-bars fa-beat-fade"></i>
+    </div>
+    </nav>
+    <div class="r1">
+        <img src="vv.jpg" width="100%" height="100%"/>
+        <div class="r11">India's Leading Embedded systems Tranning Institute</div>
+        <div class="r111">Making students industry-ready with application-oriented training program!</div>
+        <div class="cirls">
+            <div><i class="fa-solid fa-circle"></i>
+                <i class="fa-regular fa-circle"></i></div>
+        </div>
+    </div>
+    <script>
+        let ar=["vv.jpg","slide2.jpg"]
+        let br=["India's Leading Embedded systems Tranning Institute"," "]
+        let dr=["Making students industry-ready with application-oriented training program!"," "]
+        let i=0
+        let cr=document.getElementsByClassName("fa-circle")
+        function fun(){
+            cr[i].className="fa-regular fa-circle"
+            i++
+            if(i>=2){
+                i=0
+               
+            }
+            document.getElementsByTagName("img")[0].src=ar[i]
+            document.getElementsByClassName('r11')[0].innerHTML=br[i]
+            document.getElementsByClassName('r111')[0].innerHTML=dr[i]
+            cr[i].className="fa-solid fa-circle"
+        }
+        setInterval(fun,2000)
+
+    </script>
+        <div class="index">
+            <div class="round1"><img class="logo_abs_circle" src="linked.png"></div>
+            <div class="round2"><img class="logo_abs_circle" src="fb.png"></div>
+            <div class="round3"><img class="logo_abs_circle" src="twitter.jpg"></div>
+            <div class="round4"><img class="logo_abs_circle" src="insta.png"></div>
+
+            </div>
+       
+    <div class="s1">
+        <div class="s11"><h2>Click Here to Apply for Vector Online Scholarship Test</h2></div>
+        <div class="s111">
+            <a href="#"><input type="submit" value="apply now"/></a>
+        </div>
+    </div>
+    <div class="t1">
+       <div class="t11">
+        <div class="t12"><h2>Unbeatable placement records that most institutes only dream of!</h2></div> 
+        <div class="t13"><img class="modi" src="modi.jpg" width="100%" height="100%"></div>
+       </div>
+       <div class="t111">
+        <div class="ti">
+            <div>MNC's hired in 2021</div>
+            <div class="line2"></div>
+            <div class="tii"><b>630+</b></div>
+        </div>
+        <div class="ti">
+            <div>Offers in 2021</div>
+            <div class="line2"></div>
+            <div class="tii"><b>2150+</b></div>
+        </div>
+        <div class="ti" >
+            <div>MNC's hired in 2022</div>
+            <div class="line2"></div>
+            <div class="tii"><b>712</b></div>
+        </div>
+        <div class="ti">
+            <div>Offers in 2022</div>
+            <div class="line2"></div>
+            <div class="tii"><b>2208</b></div>
+        </div>
+    </div>
+    <div class="slide">
+        <div class="font1"></div>
+        <div class="slider">
+            <div class="ig1"></div> 
+            <div class="ln"></div>
+            <div class="num1">
+                <div class="no1">409</div>
+                <div class="text1">Students Recruited</div>
+            </div>
+        </div>
+        <div class="slider">
+            <div class="ig2"></div> 
+            <div class="ln"></div>
+            <div class="num2">
+                <div class="no3">382</div>
+                <div class="text1">Students Recruited</div>
+            </div>
+        </div>
+        <div class="slider">
+            <div class="ig3"></div> 
+            <div class="ln"></div>
+            <div class="num3">
+                <div class="no3">332</div>
+                <div class="text1">Students Recruited</div>
+            </div>
+        </div>
+        <div class="font1"></div>
+     </div> 
+     <div class="btn"><a href="#">More about vector India</a></div>
+      
+    </div>
+    <div class="Courses">
+        <h2 class="title">Courses we offer</h2>
+        <div class="p1">Access to long & amp; short term courses we offer to enhance your technical knowledge</div>
+        <div class="grid">
+            <!-- embedded-systems -->
+            <div class="c1">
+                <div class="c3">
+                    <div class="c2">
+                        <div style="width: 100%; "><a href="embedded-systems.html" ><b>Embedded systems Development</b></a></div>
+                        <div style=" width: 15%;  "><img src="embeddedicon.webp" width="100%"height="100%"  ></div>
+                        </div>
+                        <div class="txts">Embedded systems are evolving at breakneck speed, driving advances in 
+                            technology and fuelled by lower costs of implementing hardware and software components.</div>
+                    <div class="lin"></div>
+                    <div class="c4">Duration: 6months <br/>Course type: Offline / Online</div>
+                    
+                    
+                </div>
+                <div class="c5">
+                    <a href="https://www.vectorindia.org/registration">Apply Now</a>
+                    <div class="c5line"></div>
+                    <a href="#">Know More</a>
+                    <div class="c5line"></div>
+
+                    <a href="#">Brochure</a>
+                </div>
+            </div>
+            <!-- Full stack Development -->
+            <div class="c1">
+                <div class="c3">
+                    <div class="c2">
+                        <div style="width: 100%; "><a href="#" ><b>Full Stack Development</b></a></div>
+                        <div style=" width: 15%;  "><img src="embeddedicon.webp" width="100%"height="100%"  ></div>
+                        </div>
+                        <div class="txts">A comprehensive Full Stack Development Course ( MERN stack )
+                             with theoretical &amp; practical hands-on coding experience.</div>
+                    <div class="lin"></div>
+                    <div class="c4">Duration: 6months <br/>Course type: Offline / Online</div>
+                    
+                    
+                </div>
+                <div class="c5">
+                    <div class="c5a"><a href="https://www.vectorindia.org/registration">Apply Now</a></div>
+                    <div class="c5line"></div>
+                    <div class="c5a"><a href="#">Know More</a></div>
+                    <div class="c5line"></div>
+
+                    <div class="c5a"><a href="#">Brochure</a></div>
+                </div>
+            </div>
+            <!-- Automativ Embedded -->
+            <div class="c1">
+                <div class="c3">
+                    <div class="c2">
+                        <div style="width: 100%; "><a href="#" ><b>Automativ Embedded</b></a></div>
+                        <div style=" width: 15%;  "><img src="embeddedicon.webp" width="100%"height="100%"  ></div>
+                        </div>
+                        <div class="txts">The Automotive industry is one of the major application domains of embedded systems.
+                             Automotive embedded systems are the one where electronics take control over the mechanical system.</div>
+                    <div class="lin"></div>
+                    <div class="c4">Duration: 6months <br/>Course type: Offline / Online</div>
+                    
+                    
+                </div>
+                <div class="c5">
+                    <div class="c5a"><a href="https://www.vectorindia.org/registration">Apply Now</a></div>
+                    <div class="c5line"></div>
+                    <div class="c5a"><a href="#">Know More</a></div>
+                    <div class="c5line"></div>
+
+                    <div class="c5a"><a href="#">Brochure</a></div>
+                </div>
+            </div>
+            <!-- AUTOSAR -->
+            <div class="c1">
+                <div class="c3">
+                    <div class="c2">
+                        <div style="width: 100%; "><a href="#" ><b>AUTOSAR</b></a></div>
+                        <div style=" width: 15%;  "><img src="embeddedicon.webp" width="100%"height="100%"  ></div>
+                        </div>
+                        <div class="txts">It pursues the objective to create and establish 
+                            an open and standardized software architecture for automotive electronic control units.</div>
+                    <div class="lin"></div>
+                    <div class="c4">Durarion: 6months <br/>Course type: Offline / Online</div>
+                    
+                    
+                </div>
+                <div class="c5">
+                    <div class="c5a"><a href="https://www.vectorindia.org/registration">Apply Now</a></div>
+                    <div class="c5line"></div>
+                    <div class="c5a"><a href="#">Know More</a></div>
+                    <div class="c5line"></div>
+
+                    <div class="c5a"><a href="#">Brochure</a></div>
+                </div>
+            </div>
+            <!-- Micro Python -->
+            <div class="c1">
+                <div class="c3">
+                    <div class="c2">
+                        <div style="width: 100%; "><a href="#" ><b>Micro Python</b></a></div>
+                        <div style=" width: 15%;  "><img src="embeddedicon.webp" width="100%"height="100%"  ></div>
+                        </div>
+                        <div class="txts">Micro Python is a lean and efficient implementation
+                             of the Python 3 programming language that includes a small subset of the Python..</div>
+                    <div class="lin"></div>
+                    <div class="c4">Durarion: 6months <br/>Course type: Offline / Online</div>
+                    
+                    
+                </div>
+                <div class="c5">
+                    <div class="c5a"><a href="https://www.vectorindia.org/registration">Apply Now</a></div>
+                    <div class="c5line"></div>
+                    <div class="c5a"><a href="#">Know More</a></div>
+                    <div class="c5line"></div>
+
+                    <div class="c5a"><a href="#">Brochure</a></div>
+                </div>
+            </div>
+            <!-- Embedded C -->
+            <div class="c1"> 
+                <div class="c3">
+                <div class="c2">
+                    <div style="width: 100%; "><a href="#" ><b>Embedded C</b></a></div>
+                    <div style=" width: 15%;  "><img src="embeddedicon.webp" width="100%"height="100%"  ></div>
+                    </div>
+                    <div class="txts">Embedded C is a set of language extensions for the C programming 
+                        language by the C Standards Committee to address commonality issues that exist between C extensions..</div>
+                <div class="lin"></div>
+                <div class="c4">Durarion: 6months <br/>Course type: Offline / Online</div>
+                
+                
+            </div>
+            <div class="c5">
+                <div class="c5a"><a href="https://www.vectorindia.org/registration">Apply Now</a></div>
+                <div class="c5line"></div>
+                <div class="c5a"><a href="#">Know More</a></div>
+                <div class="c5line"></div>
+
+                <div class="c5a"><a href="#">Brochure</a></div>
+            </div></div>
+            <!-- Python -->
+            <div class="c1">
+                <div class="c3">
+                    <div class="c2">
+                        <div style="width: 100%; "><a href="#" ><b>Python</b></a></div>
+                        <div style=" width: 15%;  "><img src="embeddedicon.webp" width="100%"height="100%"  ></div>
+                        </div>
+                        <div class="txts">Our Python certification course will give you hands-on development 
+                            experience and prepare you for an exciting career as a professional Python programmer.</div>
+                    <div class="lin"></div>
+                    <div class="c4">Durarion: 6months <br/>Course type: Offline / Online</div>
+                    
+                    
+                </div>
+                <div class="c5">
+                    <div class="c5a"><a href="https://www.vectorindia.org/registration">Apply Now</a></div>
+                    <div class="c5line"></div>
+                    <div class="c5a"><a href="#">Know More</a></div>
+                    <div class="c5line"></div>
+
+                    <div class="c5a"><a href="#">Brochure</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bbck">
+   <div class="back">
+    <div class="circles">
+  <div class="circle1"></div>
+  <div class="circle2"></div>
+  <div class="circle3"></div>
+  <div class=circle4><i class="fa-solid fa-play"></i></div>
+<div class="eve" style="color: azure; font-size: 35px; z-index: 10;">Events @ Vector India</div>
+</div>
+
+
+
+    <div class="front">
+        <div class="sld">
+            <span><i class="fa-solid fa-arrow-left" onclick="bkw()"></i></span>
+            <div><img class="fasd" src="y1.jpg"></div>
+            <div><img class="fasd" src="y2.jpg"></div>
+            <div><img class="fasd" src="y3.jpg"></div>
+            <div><img class="fasd" src="y4.jpg"></div>
+            <div><img class="fasd" src="y5.jpg"></div>
+            
+            <span><i class="fa-solid fa-arrow-right" onclick="fwd()"></i></span>
+        </div>
+    </div>
+   </div>
+</div>
+   <script>
+    let arr=["y1.jpg","y2.jpg","y3.jpg","y4.jpg","y5.jpg","y6.jpg","y7.jpg"]
+    let ire=document.getElementsByClassName("fasd");
+    i=0
+    function fwd(){
+        i++
+        if(i==7)i=0;
+        for(let j=0;j<ire.length;j++){
+        ire[j].src=arr[(j+i)%7]
+}
+        
+
+    }
+    function bkw() {
+        i--
+        if(i==-1)i=6;
+        for(let j=0;j<ire.length;j++){ire[j].src=arr[(j+i)%7]}
+    }
+    // setInterval(fwd,1000)
+   </script>
+   <div class="three" >
+    <div class="on"><b>Workshops we offer</b></div>
+    <div class="off">Organizing a workshop can be an exciting way to strengthen your relationship with current clients,<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;establish new relationships and further develop yourself in your area of business.</div>
+    
+    <div class="grid" style="width: 80%; height: 70%;" >
+    <!-- IOT and Beyond -->
+        <div class="c1" style="width: 30%;">
+            <div class="c3">
+                <div class="c2">
+                    <div style="width: 100%; "><a href="iot-and-beyond.html">IOT and Beyond</a></b></a></div>
+                    <div style=" width: 15%;  "><img src="embeddedicon.webp" width="100%"height="100%"  ></div>
+                    </div>
+                    <div class="txts">IOT and beyond focuses on this digital revolution that engaging in digital technology and investment.</div>
+                <div class="lin"></div>
+                <div class="c4">Duration: 18 Hours <br/>Course type: Offline / Online</div>
+            
+            </div>
+            <div class="c5">
+                <a href="#">Contact us</a>
+                <div class="c5line"></div>
+                <a href="#">Know More</a>
+                <div class="c5line"></div>
+
+                <a href="#">Brochure</a>
+            </div>
+        </div>
+        <!-- AI/ML on Embedded Systems -->
+        <div class="c1" style="width: 30%;">
+            <div class="c3">
+                <div class="c2">
+                    <div style="width: 100%; " font-size="5px"><a href="machine-learning-on-embedded-systems.html" class="rati">AI/ML on Embedded Systems</a></div>
+                    <div style=" width: 15%;  "><img src="embeddedicon.webp" width="100%"height="100%"  ></div>
+                    </div>
+                    <div class="txts">With embedded AI /ML devices have the ability to run AI/ML models at the device level 
+                        and then directly use the results to perform an appropriate task or action.</div>
+                <div class="lin"></div>
+                <div class="c4">Durarion: 6months <br/>Course type: Offline / Online</div>
+                
+                
+            </div>
+            <div class="c5">
+                <div class="c5a"><a href="#">Contact us</a></div>
+                <div class="c5line"></div>
+                <div class="c5a"><a href="#">Know More</a></div>
+                <div class="c5line"></div>
+
+                <div class="c5a"><a href="#">Brochure</a></div>
+            </div>
+        </div>
+    <!-- Make your own Alexa -->
+        <div class="c1" style="width: 30%;">
+            <div class="c3">
+                <div class="c2">
+                    <div style="width: 100%; "><a href="make-your-own-alexa.html">Make your own Alexa</a></div>
+                    <div style=" width: 15%;  "><img src="embeddedicon.webp" width="100%"height="100%"  ></div>
+                    </div>
+                    <div class="txts">Not everyone can afford that amount of money just for a speaker.
+                         There is one thing you can do; You can build your own Alexa for free</div>
+                <div class="lin"></div>
+                <div class="c4">Durarion:7months <br/>Course type: Offline / Online</div>
+                
+                
+            </div>
+            <div class="c5">
+                <div class="c5a"><a href="#">Contact us</a></div>
+                <div class="c5line"></div>
+                <div class="c5a"><a href="#">Know More</a></div>
+                <div class="c5line"></div>
+
+                <div class="c5a"><a href="#">Brochure</a></div>
+            </div>
+        </div>
+        <div class="c6"><a href="#" style="text-decoration: none;color: white;  ">View All Workshops</a></div>
+    </div>
+</div>
+<div class="vector">
+ <div class="b1"><b>@vectorindiainstitute</b></div>
+ <i class="fa-solid fa-arrow-right"></i>
+ <div style="color: white;"><i class="fa-solid fa-arrow-right"></i></div>
+ <div class="hole">
+    <div class="b2"><img src="v1.jpg" alt="" width="100%" height="100%"><span  class="pn"style="color:black;"><i class="fa-solid fa-arrow-right"></i></span> </div>
+    <div class="b2"><img src="v2.jpg" alt=""  width="100%" height="100%"></div>
+    <div class="b2"><img src="v3.jpg" alt=""  width="100%" height="100%"></div>
+    <div class="b2"><img src="v4.jpg" alt=""  width="100%" height="100%"></div>
+    <div class="b2"><img src="v5.jpg" alt=""  width="100%" height="100%"></div>
+    <div class="b2"><img src="v6.jpg" alt=""  width="100%" height="100%"></div>
+   </div>
+</div>
+    <div class="test">
+    <div class="test1">
+    <div class="Testimonials" style="color: rgb(246, 93, 37); font-size: 50px;justify-content: center; ">Testimonials</div>
+    <div class="cont1">
+    <div class="cie" style="margin-left: 60vh; margin-top: -35vh; background-image: url(pp.jpg); background-size: 100% 100%;" onclick="upd()"></div>
+    <div class="matter" style="font-size: 25px;justify-content: space-around;margin-top: 30px;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        Testimonales are one of the most important tools in companycan used <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        to show. Potential customers how valuable their varible products and servies are.<br>
+        Testimonales are short statement that describes how a product or servies work for customers.</div>
+        <div class="tanik" style="font-size: 25px; color: rgb(239, 113, 67); margin-left: 55vh; margin-top: 30px;">Tanikachalam V</div> 
+   </div>
+</div>
+</div>
+<script>
+    let arr1=["pp.jpg","v5.jpg","v6.jpg","pp.jpg"]
+    let j=0
+    function upd(){
+        j++
+        if(j>4){
+            j=0
+        }
+        document.getElementsByClassName("cie")[0].backgroundImage=`url(${arr1[j]})`
+    }
+setInterval(upd,1000)
+</script>
+
+<div class="accordion " id="accordionExample" style="width: 90vh; margin-left: 50vh;">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne" >
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+            1. What are the courses offered at Vector India?
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+           These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+            2. What is Embedded Systems? Where is it Used?
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            Embedded systems are self-contained programs that are embedded within a piece of hardware. We can say it’s a specialized computer system that is part of a larger system or machine. Typically, an embedded system is housed on a single microprocessor board with the programs stored in ROM. Embedded system can also be defined as a computer system that is created with optimal efficiency, thereby allowing it to complete specific functions as quickly as possible. Embedded systems microprocessors are programmed to automate certain tasks. Cell phones, computers, copiers, medical equipment, programmable logic controllers, and numerous other products rely on embedded systems. Real time embedded systems can be used to replace traditional software applications.
+
+            Embedded systems are used in any application or which requires certain level of automation or intelligence. As more and more intelligent devices make their way into our lives, the demand for embedded telecom will increase. In addition, even in areas where telecom companies are in the grips of a slowdown, companies are not making cuts in introducing new features.
+            
+            The range is really very wide, limited only by human imagination,” B J Ram Rao, CEO, eSmartNet (a division of Zicom Electronic Security Systems) admitted in a recent interview with Zee India. “I would think that, broadly, the embedded system application areas would be wireless, Internet and mobile communications, industrial control, test and measurement, networking, aerospace and automotive control, consumer electronics, digital imaging and defence.”
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingThree">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            3. What is the Scope of Embedded Systems?
+        </button>
+      </h2>
+      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+            Embedded System is the future. Every industry needs some artificial intelligence into it and artificial intelligence can be given by embedded systems only. No electronic product is without embedded systems in the market.
+
+            Embedded System Market Size Global forecast to 2025
+            The embedded system market is estimated to reach from $86.5 billion in 2020 to $116.2
+            Billion by 2025, at a CAGR of 6.1% from 2020 to 2025.
+            
+            The increase in the number of research and development activities related to embedded systems, rise in demand for advanced driver-assistance systems (ADAS) and electromobility solutions for electric vehicles and hybrid vehicles, increase in demand for portable devices such as wearables, and rise in the use of multicore processors in military applications are making embedded systems one of the most sought-after fields in the market.
+            
+            2020 – 86.5 billion USD 2025 – 116.2 billion USD (Global Embedded systems market growth).
+        </div>
+      </div>
+    </div>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                4. Why VECTOR Institute for Embedded Systems & VLSI Training?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                We teach basics and underlying concepts of Embedded Systems in detail, and provide real-time experience to students. This will help each student to not only understand the concept, but also the knowledge of applying concepts in real time situation. Our Embedded Systems & VLSI courses provide complete practical knowledge to students, and makes students ready for placement with Embedded and VLSI industry.
+
+                To make the Embedded Systems course full-fledged and complete we have included modules like Object Oriented Concepts with C++, RT-Linux with porting on ARM, 4 mini projects and one major project We cover the Micro controllers in great depth: Intel 8051 and ARM 9 series. In addition, we go for the hardware interfacing in detail. To meet the latest industry requirements, we have included in the course content ARM microcontrollers, Version control tools, and GSM.
+                
+                Our continuous liaison with Embedded industry has enabled us to know their expectations of each candidate. So, our highly experienced faculties have made sure that our students come out as industry ready professionals.
+                
+                We have dedicated placement cell to take care of the placements and to make sure that the students are placed at the best possible places. We have ever improved placement record of 630+ campus drives & 2150+ Selects during the year 2021.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                5. Admission process followed at VECTOR INSTITUTE for training into long term courses?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                The admission into Embedded Systems course is based on our Vector Online Entrance examination. *Working professionals with Relevant Experience are eligible for Direct Admission.
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+  <div class="main">
+    <div class="div1"> 
+        <h3>Hyderabad</h3> <br>
+        <hr style="width:120%; border:1px solid orangered;"><br>
+        <p style="color: white;">#502, Nagasuri Plaza (Bank Of India<br> building), Behind Maithrivanam,<br> Ameerpet, Hyderabad - 500038.</p>
+        <p style="color:orangered;margin-top: 10px; font-size: 20px;"><i class="fa-solid fa-phone"></i><span style="color: white; padding-left: 10px;">+91 9866666699</span></p>
+        <p style="color:orangered;margin-top: 10px; font-size: 20px;" ><i class="fa-solid fa-headphones"></i><span style="color: white; padding-left: 10px;">040 23 73 6669</span></p>
+        <p style="color:orangered;margin-top: 10px; font-size: 20px;"><i class="fa-solid fa-envelope"></i><span style="color: white; padding-left: 10px;">info@vectoeindia.org</span></p>
+    </div>
+    <div class="div1"> 
+        <h3>Bangalore</h3> <br>
+        <hr style="width:120%; border:1px solid orangered;"><br>
+        <p style="color: white;">33/49, 27th Cross, 12th Main <br>, Jayanagar 4th block, Bangalore<br> - 560011.</p>
+        <p style="color:orangered;margin-top: 10px; font-size: 20px;"><i class="fa-solid fa-phone"></i><span style="color: white; padding-left: 10px;">+91 9866666699</span></p>
+        <p style="color:orangered;margin-top: 10px; font-size: 20px;" ><i class="fa-solid fa-headphones"></i><span style="color: white; padding-left: 10px;">040 23 73 6669</span></p>
+        <p style="color:orangered;margin-top: 10px; font-size: 20px;"><i class="fa-solid fa-envelope"></i><span style="color: white; padding-left: 10px;">info@vectoeindia.org</span></p>
+    </div>
+    <div class="div1"> 
+        <h3>Chennai</h3> <br>
+        <hr style="width:120%; border:1px solid orangered;"><br>
+        <p style="color: white;">2nd floor, 179, 1st Main Road, Nehru<br> Nagar, Lane Opp to Turyaa Hotel,<br> Perungudi, Chennai - 600096.</p>
+        <p style="color:orangered;margin-top: 10px; font-size: 20px;"><i class="fa-solid fa-phone"></i><span style="color: white; padding-left: 10px;">+91 9866666699</span></p>
+        <p style="color:orangered;margin-top: 10px; font-size: 20px;" ><i class="fa-solid fa-headphones"></i><span style="color: white; padding-left: 10px;">040 23 73 6669</span></p>
+        <p style="color:orangered;margin-top: 10px; font-size: 20px;"><i class="fa-solid fa-envelope"></i><span style="color: white; padding-left: 10px;">info@vectoeindia.org</span></p>
+    </div>
+    <div class="div1"> 
+        <h3>Comapany</h3> <br>
+        <hr style="width:190px; border:1px solid orangered;"><br>
+        <ul style="color: white;">
+            <li>About Vector india</li>
+            <li>Careers</li>
+            <li>Testimonials</li>
+            <li>Photo Gallery</li>
+            <li>Product FAQs</li>
+            <li>Policies</li>
+            <li>Blog</li>
+            <li>Contact Us</li>
+            <li> Site Map</li>
+        </ul>  
+</body>
+</html>
